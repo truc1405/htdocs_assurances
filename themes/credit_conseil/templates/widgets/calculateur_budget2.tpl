@@ -1,0 +1,1 @@
+<a class='calculateur_budget_btn2' href="/{$shortlang}/{l file='urls' term='demande-credit.html'}?demande" title=''>{l term='Demande en ligne'}</a>

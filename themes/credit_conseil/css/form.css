@@ -1,0 +1,921 @@
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									Hors formulaire									////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*#form_demande_credit{
+	width:930px;
+}*/
+#zoneForm{
+	position:relative;
+	width:913px;
+	margin:0 auto 20px auto ;
+	background:url(../deco/texture.jpg);
+}
+
+#bgTop{
+	position:absolute;
+	left:0;
+	top:-9px;
+	width:913px;
+	height:9px;
+	background:url(../deco/bg_form_top.png) no-repeat;	
+}
+#bgBot{
+	position:absolute;
+	left:0;
+	bottom:-9px;
+	width:913px;
+	height:9px;
+	background:url(../deco/bg_form_bot.png) no-repeat;
+}
+#formContent{
+	width:853px;
+	padding:1px 30px 1px 30px;
+	background:url(../deco/bg_form_mid.png);	
+}
+
+
+
+#demande-credit-formulaire{
+	position:relative;
+}
+.etape{
+	display:none;
+	width:853px;
+}
+
+#etape1{
+	display:block;
+}
+
+#champEmail{
+
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									MESSAGES										////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.message, .info{
+	display:block;
+	margin-bottom:5px;
+}
+
+
+
+
+
+#form_demande_credit #txtSansEngagement{
+	margin:30px 0 20px;
+	font-size:30px;
+	text-shadow:			0px 1px 1px rgba(0,0,0,0.2);
+	
+	font-family:Georgia;
+	font-style:italic;
+	font-weight:bold;
+	color:#49982A;
+	text-align:center;
+}
+
+
+#form_demande_credit .paragrapheConjoint{
+	width:600px;
+	padding:20px 80px;
+	margin:0 auto 30px auto;
+	color:#555;
+/*	font-weight:bold;*/
+	font-style:italic;
+	font-family:Georgia;
+
+
+	font-size:15px;
+	border:2px solid orange;
+
+	box-shadow: 			0px 2px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 		0px 2px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 	0px 2px 2px rgba(0,0,0,0.5);
+	background:rgba(255,180,50,0.4);
+}
+
+
+#form_demande_credit .field.error{
+}
+
+
+
+
+
+
+#form_demande_credit .field.error .leftContent{
+	color:#c53509 !important;
+}
+
+#form_demande_credit .field.error{
+	background-color:#FAF0F1;
+	background-color:rgba(255,0,0,0.05) ;
+	background-image:url(../deco/icons/form_ko.png);
+	background-repeat: no-repeat;
+/*	background-position:0px 15px;*/
+}
+
+#form_demande_credit .field.error .message,
+.zoneRapportErreurs{
+	color:#c53509 !important;
+	font-family:Georgia;
+	font-style:italic;
+	font-weight:bold;
+	font-size:12px;
+	margin-right:30px;
+}
+
+.zoneRapportErreurs{
+/*	min-height:25px;*/
+	line-height:25px;
+	margin:10px 0 15px 0;
+}
+.contentErrors{
+	display:none;
+
+	font-size:14px;
+}
+
+
+
+
+
+#form_demande_credit .field.error:hover{
+}
+
+.messageMessage{
+	color:#E34133 ;
+	font-style: italic;
+	font-family:'Georgia';
+}
+
+/* Succès */
+#form_demande_credit .field.success{
+	background-color:#EFF7EB;
+	background-color:rgba(0,255,0,0.05);
+	background-image:url(../deco/icons/form_ok.png);
+	background-repeat: no-repeat;
+}
+
+
+
+
+#form_demande_credit .field.success.warning{
+	background-color:#ff900f;
+	background-color:rgba(255,144,15,0.1);
+	background-image:url(../deco/icons/warning2.png);
+	background-repeat: no-repeat;
+}
+
+#form_demande_credit .field.success.warning .leftContent{
+	color:#e45a00 !important;
+}
+#form_demande_credit .field.success.warning .message{
+	color:#e45a00 !important;
+	font-family:Georgia;
+	font-style:italic;
+	font-weight:bold;
+	font-size:12px;
+	margin-right:30px;
+
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									NAVIGATION										////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.boutonsNav{
+	text-align:center;
+	margin:20px auto 20px;
+}
+
+.boutonEtapeSuivante{
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	
+	width:330px;
+	height:51px;
+
+	line-height:47px;	
+	color:white;
+	font-size:17px;
+	text-align:center;
+	background-image:url(../deco/next_step_0.png) ;
+	background-image:url(../deco/next_step_2.png) ;
+	background-image:url(../deco/next_step_3.png) ;
+	background:url(../deco/next_step_1.png) no-repeat;
+	text-shadow:0px 1px 1px rgba(0,0,0,0.2);
+	cursor:pointer;
+}
+
+#sending{
+	display:none;
+	position:absolute;
+	right:10px;
+	top:8px;	
+	height:30px;
+	width:30px;
+	background:url(../deco/ajax-loader.gif) no-repeat center center;
+	
+
+	box-shadow: 			0px 2px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 		0px 2px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 	0px 2px 2px rgba(0,0,0,0.5);
+
+	-webkit-border-radius: 	5px;
+	-khtml-border-radius: 	5px;	
+	-moz-border-radius: 	5px;
+	border-radius: 			5px;
+}
+
+.boutonEtapeSuivante:hover{
+	background-image:url(../deco/next_step_2.png) ;
+}
+
+.boutonEtapeSuivante:active{
+	line-height:48px;
+	background-image:url(../deco/next_step_3.png) ;
+}
+.boutonEtapeSuivante.disabled{
+	background-image:url(../deco/next_step_0.png)  !important;
+}
+
+
+.etape .boutonEtapePrecedente{
+	display:inline-block;
+	vertical-align:middle;
+	width:330px;
+	height:40px;
+	line-height:37px;
+	margin-right:20px;
+
+	
+
+	color:white;
+	font-size:13px;
+	cursor:pointer;
+	background-image:url(../deco/prev_step_0.png) ;
+	background-image:url(../deco/prev_step_2.png) ;
+	background-image:url(../deco/prev_step_3.png) ;
+	background:url(../deco/prev_step_1.png) no-repeat;
+}
+
+.etape  .boutonEtapePrecedente:hover{
+	background-image:url(../deco/prev_step_2.png) ;
+}
+
+.etape  .boutonEtapePrecedente:active{
+	line-height:38px;
+	background-image:url(../deco/prev_step_3.png) ;
+}
+.etape .boutonEtapePrecedente.disabled{
+	background-image:url(../deco/prev_step_0.png)  !important;
+}
+
+
+
+
+
+.etapesEnonce{
+	padding-top:10px;
+	padding-bottom:10px;
+	height:50px;
+
+}
+
+.etapesEnonce li{
+	display:inline-block;
+	vertical-align:top;
+	height:50px;
+	line-height:50px;
+
+	padding:0 20px 0 0 !important ;
+	text-align:center;
+	font-size:11px;
+	background:url(../deco/etapesForm/etapes_b.png) no-repeat right bottom;
+	cursor:default;
+}
+
+.etapesEnonce li span{
+	display:block;
+	height:30px;
+	line-height:30px;
+	background:url(../deco/etapesForm/etapes_b.png) no-repeat left bottom;
+	padding:10px 18px 10px 39px;
+	color:#777;
+
+}
+.etapesEnonce li.active, 
+.etapesEnonce li.active span
+{
+	color:white;
+	background-image:url(../deco/etapesForm/etapes_a.png) ;
+}
+
+
+.pt .etapesEnonce li span{
+	padding-left:35px;
+	padding-right:15px;
+}
+
+.en .etapesEnonce li span{
+	padding-left:47px;
+	padding-right:27px;
+}
+
+
+/*
+.enonceEtape1 span{width:150px;}
+.enonceEtape2 span{width:150px;}
+.enonceEtape3 span{width:150px;}
+.enonceEtape4 span{width:150px;}
+.enonceEtape5 span{width:150px;}
+*/
+	
+	
+/*.enonceEtape1.active{background-image:url(../deco/etapesForm/e1.jpg) ;}
+.enonceEtape2.active{background-image:url(../deco/etapesForm/e2.jpg) ;}
+.enonceEtape3.active{background-image:url(../deco/etapesForm/e3.jpg) ;}
+.enonceEtape4.active{background-image:url(../deco/etapesForm/e4.jpg) ;}
+.enonceEtape5.active{background-image:url(../deco/etapesForm/e5.jpg) ;}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									FIELDS											////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+#form_demande_credit h2{
+	border:none;
+	font-size:18px;
+	margin:40px 0 20px 0;
+	font-weight:bold;
+	font-style:italic;
+	font-family:Georgia;
+}
+#form_demande_credit h3{
+	margin:40px 0 20px 0;	
+}
+
+#form_demande_credit fieldset{
+	margin:10px 0 20px 0;
+/*	border-top:1px solid #b6b6b6;*/
+/*	border-bottom:1px solid white;*/
+	
+/*	border-left:1px solid #b6b6b6;
+	border-right:1px solid #b6b6b6;*/
+	
+
+	box-shadow: 			0px 0px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 		0px 0px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 	0px 0px 3px rgba(0,0,0,0.3);
+	
+}
+
+#form_demande_credit .field{
+	position:relative;
+	display:block;
+	border-bottom:1px solid #b6b6b6;
+	border-top:1px solid white;
+	padding:5px 0;
+	background:rgba(255,255,255,0.4);
+	background-position:10px 11px;
+}
+
+#form_demande_credit .field:hover{
+	background-color:rgba(255,255,255,0.7) !important;
+}
+
+#form_demande_credit .field.hidden
+{
+	 display:none; 
+}	
+
+
+#form_demande_credit .messageBox.field{
+	border:none;
+	background:none;
+	padding:0 10px;
+	-webkit-transition:	none;
+	-moz-transition:	none;
+	-o-transition:		none;
+	transition:			none;
+}
+
+#form_demande_credit .acceptation.field .error{
+	background-image:url(../deco/icons/error.png);
+}
+
+#form_demande_credit .acceptation.field:hover{
+	background:none;
+}
+
+.boucheTrou{}
+.boucheTrou.first{height:34px;}
+.boucheTrou.fieldsetSingleField{height:43px;}
+
+.label.field{
+	display:block;
+}
+
+
+
+
+.infoBtn{
+	position:absolute;
+	right:15px;
+	top:8px;
+	height:24px;
+	width:24px;
+	background:url(../deco/icons/information.png) no-repeat;
+}
+
+
+
+#adressePrecedente{
+	display:none;
+}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									PARTS											////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/*
+#form_demande_credit .leftPart,
+#form_demande_credit .rightPart,
+#form_demande_credit .thirdPart{
+	border:1px solid blue;
+}
+*/
+
+#form_demande_credit .leftPart{
+	display:inline-block;
+	vertical-align:top;
+	width:330px;
+	padding:3px 10px 3px 10px;
+	margin:0 0 0 0;
+}
+#form_demande_credit .rightPart{
+	display:inline-block;
+	vertical-align:top;
+	padding:0 0px;
+	font-family:'Georgia';
+	font-style: italic;
+	width:230px;
+}
+#form_demande_credit .thirdPart{
+	display:inline-block;
+	vertical-align:top;
+	width:220px;
+	padding:5px 10px 0 30px;
+	margin:0 0 0 0px;
+
+}
+#form_demande_credit .quartPart{
+	display:none;	
+	position:absolute;
+	z-index:55;
+	right:30px;
+	bottom:20px;
+	max-width:250px;
+	vertical-align:top;
+
+	padding:10px 20px;
+	margin:10px 0;
+	
+	border:5px solid white;
+	
+	-webkit-border-radius: 	5px;
+	-khtml-border-radius: 	5px;	
+	-moz-border-radius: 	5px;
+	border-radius: 			5px;
+	
+	box-shadow: 			0px 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 		0px 2px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 	0px 2px 4px rgba(0,0,0,0.5);
+	
+	background:#3064D0;
+	color:white;
+}
+
+
+.info_permanente{
+	display:block;
+	margin:10px 40px ;
+	padding:5px 40px 10px;
+	
+	-webkit-border-radius: 	5px;
+	-khtml-border-radius: 	5px;	
+	-moz-border-radius: 	5px;
+	border-radius: 			5px;
+	
+	box-shadow: 			0px 2px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 		0px 2px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 	0px 2px 2px rgba(0,0,0,0.5);
+	
+	background:white;
+}
+
+
+#form_demande_credit .leftPart .info{
+	margin-left:30px;
+}
+
+
+ #form_demande_credit .rightPart input,  #form_demande_credit .rightPart textarea{
+/*	background:none;*/
+	font-family:'Georgia';
+	font-style: italic;
+	color:#999;
+}
+
+
+
+
+#form_demande_credit .field.first{
+	background-position: 435px 12px;
+}
+
+
+
+
+#form_demande_credit .field.first.last .rightPart, #form_demande_credit .field.first.last.leftPart{
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////									TYPES DE CHAMPS									////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.radio{}
+
+.radio .rightPart{
+	padding-top:4px !important;
+	line-height:20px;
+	font-size:13px;
+	color:#777;
+}
+.radio label{
+	padding:0 10px 0 0;
+}
+.radio input{
+	margin:0 7px 10px 0;
+	padding:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.text{
+	
+}
+
+.text.readonly{
+
+	font-size:13px;
+}
+
+.text.readonly .info_readonly{
+	color:#777;
+	padding-top:5px;
+}
+
+
+.leftContent{
+	display:block;
+	margin:0 30px 0 30px;
+	color:#777;
+	font-size:12px;
+	font-weight:bold;
+	font-style:italic;
+	font-family:Georgia;
+}
+
+.rightPart{
+	color:#999;
+}
+
+.select	 .leftContent,
+.text 	 .leftContent,
+.number  .leftContent,
+.email 	 .leftContent,
+.phone 	 .leftContent,
+.phoneCH .leftContent,
+.date 	 .leftContent,
+.dateMois 	 .leftContent
+{
+	display:block;
+	padding-top:2px;
+}
+
+
+.text.last    .leftContent,
+.number.last  .leftContent,
+.phone.last   .leftContent,
+.phoneCH.last .leftContent
+{
+	padding-bottom:5px;
+}
+
+.text 	    input,
+.number     input,
+.phone 	    input,
+.phoneCH    input,
+.email	    input,
+.date 	    input,
+.dateMois   input
+{
+	height:20px;
+	width:200px;
+	padding:2px 10px 2px 13px;
+	margin:0;
+	color:#999;
+	font-size:14px;
+/*	border:none;*/
+
+/*	border:1px ridge red;
+/*none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset*/*/
+}
+
+.text 	    input.empty,
+.number     input.empty,
+.phone 	    input.empty,
+.phoneCH    input.empty,
+.email	    input.empty,
+.date 	    input.empty,
+.dateMois   input.empty
+{
+	color:#aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.select{}
+
+.field.select.error, .field.select.success{}
+
+.select .leftContent{
+
+}
+.select .selectDiv{
+	width:226px;
+	line-height:24px;
+	padding:0 0 0 0;
+	margin:0;
+
+	overflow:hidden;
+	cursor:pointer;
+	
+/*	-webkit-border-radius: 	5px;
+	-khtml-border-radius: 	5px;	
+	-moz-border-radius: 	5px;
+	border-radius: 			5px;*/
+	
+	background:url(../deco/fleches_sprite.png) no-repeat;
+	background-color:white;
+	background-position:200px -140px;
+	border:1px solid #999;
+	font-size:13px;
+}
+
+
+.select .visible_option{
+	width:185px;
+	padding-top:4px;
+	padding-bottom:2px;
+	padding-right:27px;
+	padding:4px 27px 2px 13px;
+	margin-bottom:0px;
+	line-height:20px;
+}
+
+.select .option{
+	width:145px;
+	min-height:15px;
+	padding-top:3px;
+	padding-bottom:5px;
+	padding-left:13px;
+	line-height:14px;
+
+}
+.select .selectDiv.hover .visible_option{
+	color:orange;
+}
+
+.select .selectDiv .options{
+	display:none;
+	max-height:210px;
+/*	overflow-x: hidden;
+	overflow-y: auto;*/
+	overflow:auto;
+/*	padding-bottom:5px;
+	padding-top:10px;*/
+}
+
+.select .selectDiv.show .options{
+	display:block;
+	
+}	
+
+.select .selectDiv.show{
+	overflow:auto;
+	height:auto;
+}
+
+.select .selectDiv div.option.hover, 
+.select .selectDiv div.selected_option,
+.select .selectDiv div.selected_option_temp
+{
+	color:#FF9600;
+}
+
+
+/* auto complete */
+.select.autocomplete .selectDiv{
+	
+}
+
+.select.autocomplete .selectDiv .visible_option{
+	border:none;
+	margin:0;
+	font-size:13px;
+	color:#999;
+	background:none;
+	cursor:pointer;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.textarea{
+	
+}
+.textarea textarea{
+	padding:10px;
+
+	line-height:19px !important;
+	font-size:12px !important;
+	font-style: normal !important;
+}
+
+
+
+
+
+
+
+
+
+
+.num_suisse,
+.num_italie,
+.num_france,
+.num_allemagne,
+.num_autriche{
+	height:20px;
+	background:url(../deco/icons/telephones.png) no-repeat;
+	background-position:0px -3px;
+	padding-left:40px;
+	margin-left:30px;
+}
+
+.num_italie{
+	background-position:0px -32px;
+}
+.num_france{
+	background-position:0px -62px;
+}
+
+.num_allemagne{
+	background-position:0px -91px;
+}
+.num_autriche{
+	background-position:0px -120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#aVuCG {
+	cursor:pointer;		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

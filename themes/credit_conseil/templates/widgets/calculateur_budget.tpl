@@ -1,0 +1,1 @@
+<a id='calculateur_budget_btn' href="/{$shortlang}/{l file='urls' term='demande-credit.html'}" title=''>{l term='Ai-je droit à un crédit et à quel montant maximal ?'}</a>

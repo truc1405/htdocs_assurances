@@ -1,0 +1,118 @@
+
+
+#entete
+,.menu
+,#signatureNetlead
+
+{
+	display:none;
+}
+
+
+
+
+
+body{
+	font-family: 'Molengo', 'Arial', Arial, "Trebuchet MS";
+}
+
+h1{
+	margin-bottom:20px;
+	font-size:32px;
+	color:#092c47;
+	font-weight:bold;
+	letter-spacing:0.1em;
+	text-shadow:0px 1px 1px rgba(0,0,0,0.3);
+
+}
+.applycms h2{
+	margin:30px 0 20px 0 ;
+	font-size:26px;
+	color:#0268a3;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-shadow:0px 1px 1px rgba(0,0,0,0.3);
+}
+.applycms h3{
+	margin:20px 0 20px 0 ;
+	font-size:18px;
+	color:#0268a3;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-shadow:0px 1px 1px rgba(0,0,0,0.1);
+}
+.applycms h4{
+	margin:20px 0 5px 0;
+	font-size:16px;
+	color:#ffb400;
+}
+
+
+.applycms blockquote{
+	margin:20px 50px 0 30px;
+	padding:5px 20px;
+}
+
+.applycms p, .applycms ul, .applycms ol,.applycms dl, .applycms form, .applycms div.applycms{
+	margin-bottom:1em;
+	font-size:12px;
+	color:#646464;
+	line-height:1.7em;
+	letter-spacing:0.01em;
+	font-family:"Lucida Grande", "Arial";
+	
+	
+}
+.applycms a{
+	color:#0268a3;
+	text-decoration:none;
+}
+.applycms a:hover{
+	text-decoration:underline;
+}
+.applycms strong{
+	font-weight:bold;
+	color:#555;
+}
+.applycms ul, .applycms ol{
+	margin-bottom:1em;
+	margin-left:30px;
+}
+.applycms ul li, .applycms ol li{
+	padding-left:5px;
+}
+
+.applycms img.icon{
+	float:left;
+	margin-right:10px;
+}
+.applycms ul{
+	/*list-style: disc outside url(../deco/puce.jpg) ;*/
+	list-style: disc outside;
+}
+
+.applycms ol{
+	list-style: outside decimal;
+}
+
+.applycms .tabulaire{
+	width:760px;
+}
+
+.applycms .tabulaire th{
+	font-weight:bold;
+}
+.applycms .tabulaire td{
+	padding:1px;
+	text-align:center;
+}
+.applycms .tabulaire tr{
+	
+}
+
+.applycms .surbrillance{
+	font-weight:bold;
+}
+
+
+

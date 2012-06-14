@@ -1,0 +1,90 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+
+# REDIRECTIONS 301 POUR MIGRATION
+
+# Le chapeau: ^
+# Le dollars $
+# Le point d’exclamation !
+# Le point .
+# L’étoile *
+# Le pipe |
+
+
+## redirections pour le mode maintenance ####### ####### ####### ####### ####### ####### ####### #######
+
+#RewriteCond %{REMOTE_ADDR} !^84\.253\.36\.105
+#RewriteCond %{REQUEST_URI} !/index.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /index.html [R=302,L]
+
+## fin redirections pour le mode maintenance  ####### ####### ####### ####### ####### ####### ####### ####### #######
+
+
+
+## redirections pour le ssh ####### ####### ####### ####### ####### ####### ####### #######
+
+#RewriteCond %{REQUEST_URI} /fr/demande-credit.html
+#RewriteRule ^$	https://credit-conseil.ch/fr/demande-credit.html[R=301,L]
+#
+#RewriteCond %{REQUEST_URI} /en/credit-application-form.html
+#RewriteRule ^$	https://credit-conseil.ch/en/credit-application-form.html	[R=301,L]
+#
+#RewriteCond %{REQUEST_URI} /pt/pedido-credito.html
+#RewriteRule ^$	https://credit-conseil.ch/pt/pedido-credito.html	[R=301,L]
+
+## fin redirections ssh  ####### ####### ####### ####### ####### ####### ####### ####### #######
+
+
+RewriteRule ^pret-conso-credits-conseils.php$	 					/fr/societe-de-credit.html [R=301,L]
+RewriteRule ^pret-taux-actuel.php$	 								/fr/pret-avantage.html [R=301,L]
+RewriteRule ^dossier-pret.php$	 									/fr/credit-prive/documents-a-remettre.html [R=301,L]
+RewriteRule ^conditions-souscrire-pret-demande-credit.php$			/fr/profil-demande-credit.html [R=301,L]
+RewriteRule ^informations_credit_prive.php$	 						/fr/faq.html [R=301,L]
+RewriteRule ^pret/credit-bateau.php$	 							/fr/pret-projet/financement-bateau.html [R=301,L]
+RewriteRule ^pret/credit-camping-car-caravane.php$	 				/fr/pret-projet/credit-camping-car.html [R=301,L]
+RewriteRule ^pret/meilleur-credit-moto-scooter.php$	 				/fr/pret-projet/credit-moto.html [R=301,L]
+RewriteRule ^pret/credit-auto-meilleur-taux-credit-voiture.php$		/fr/pret-projet/credit-auto.html [R=301,L]
+RewriteRule ^pret/credit-auto-leasing.php$	 						/fr/avantages/credit-leasing.html [R=301,L]
+RewriteRule ^pret/credit-reparation-pret.php$	 					/fr/pret-projet/credit-vehicule.html [R=301,L]
+RewriteRule ^pret/credit-demenagement.php$	 						/fr/pret-projet/credit-demenagement.html [R=301,L]
+RewriteRule ^pret/credit-mobilier.php$	 							/fr/pret-projet/credit-mobilier.html [R=301,L]
+RewriteRule ^credit-pret-piscine-jardin.php$	 					/fr/pret-projet/credit-habitation.html [R=301,L]
+RewriteRule ^pret/credit-habitation.php$	 						/fr/pret-projet/credit-travaux.html [R=301,L]
+RewriteRule ^pret/credit-habitation-image-son.php$	 				/fr/pret-projet/credit-informatique-multimedia.html [R=301,L]
+RewriteRule ^pret-informatique.php$	 								/fr/pret-projet/credit-informatique-multimedia.html [R=301,L]
+RewriteRule ^credit_frontalier_suisse.php$	 						/fr/profil/credit-frontalier-permis-g.html [R=301,L]
+RewriteRule ^credit-sante.php$	 									/fr/pret-projet/credit-chirurgie-sante.html [R=301,L]
+RewriteRule ^credit-personnel/demande-pret-personnel.html$			/fr/credit-prive-en-ligne.html [R=301,L]
+RewriteRule ^pret-conso-anniversaire.php$	 						/fr/pret-projet/pret-mariage-naissance.html [R=301,L]
+RewriteRule ^pret-credit-mariage.html$	 							/fr/pret-projet/pret-mariage-naissance.html [R=301,L]
+RewriteRule ^credit-naissance.php$	 								/fr/pret-projet/pret-mariage-naissance.html [R=301,L]
+RewriteRule ^credit-pacs.html$	 									/fr/pret-projet/pret-mariage-naissance.html [R=301,L]
+RewriteRule ^credit-loisir.html$	 								/fr/pret-projet/credit-loisir-voyage.html [R=301,L]
+RewriteRule ^credit-voyages.html$	 								/fr/pret-projet/credit-loisir-voyage.html [R=301,L]
+RewriteRule ^rachat-credit.php$	 									/fr/rachat-credit.html [R=301,L]
+RewriteCond %{QUERY_STRING} ^language=fr$
+RewriteRule ^contact.php$ 											/fr/contact.html? [R=301,L]
+
+
+RewriteCond %{HTTP_HOST}	www.credit-conseils.ch [OR]
+RewriteCond %{HTTP_HOST}	www.credits-conseils.ch	[OR]
+RewriteCond %{HTTP_HOST}	www.creditsconseils.ch
+RewriteRule ^(.*)$ 		http://www.credit-conseil.ch/$1 [R=301]
+
+RewriteRule ^$	 	/fr/ [R=301]
+RewriteRule ^fr$ 	/fr/ [R=301]
+RewriteRule ^de$ 	/de/ [R=301]
+RewriteRule ^en$ 	/en/ [R=301]
+RewriteRule ^it$ 	/it/ [R=301]
+RewriteRule ^pt$ 	/pt/ [R=301]
+
+RewriteRule ^$  							/indexx.php?lang=fr 		[QSA,L]
+RewriteRule ^(fr|en|it|pt|de)/$  			/indexx.php?lang=$1&uri=$2 	[QSA,L]
+RewriteRule ^(fr|en|it|pt|de)/(.*)\.html$  	/indexx.php?lang=$1&uri=$2 	[QSA,L]
+
+
+# Catch 404 errors
+#ErrorDocument 404 /index.php?uri=page404
+#ErrorDocument 404 http://www.credit-conseil.ch/index.html

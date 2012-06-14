@@ -1,0 +1,1 @@
+<a class='offre_speciale_btn' href="/{$shortlang}/{l file='urls' term='avantages/offre-speciale.html'}" title=''>{l file='global' term='Offre spéciale'}</a>

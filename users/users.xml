@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clients>
+	
+	<client id='1' login='sam.baptista'>
+		<prenom>Samuel</prenom>
+		<nom>Baptista</nom>
+		
+		<pass>25d55ad283aa400af464c76d713c07ad</pass>
+		<login>sam.baptista</login>
+
+	</client>
+
+
+
+
+</clients>

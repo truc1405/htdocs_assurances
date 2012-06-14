@@ -1,0 +1,96 @@
+
+.column,
+#conteneur_form .colEmprunteur, 
+#conteneur_form .colConjoint,
+#menuPrincipal .item,
+#menuSecondaire .item,
+#menuTerciaire .item,
+#menuGauche,
+#contentWrapper,
+#sky,
+#confirmForm,
+#loginSep,
+#openZone11 div, 
+#closeZone11 div,
+#btnFacebook,
+#btnTwitter,
+#btnfluxRss, 
+#btnMail,
+#btnMail2,
+#btnSite,
+#btnShop,
+#btnLinkedIn,
+#btnBlog,
+#liens_rapides,
+#liens_pratiques,
+#derniere_col,
+#liens_rapides ul li,
+#liens_pratiques li,
+#liens_rapides ul ul,
+#liens_pratiques ul,
+.inlineblock,
+.boutonEtapeSuivante,
+.boutonEtapePrecedente,
+.etapesEnonce li
+{
+	display:inline;
+	zoom:1;
+	vertical-align:top;
+}
+
+
+#liens_rapides ul ul li,
+#liens_pratiques ul li{
+	list-style:outside;
+}
+
+.etapesEnonce li{
+	list-style:none;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+
+
+
+#form_demande_credit .leftPart,
+#form_demande_credit .rightPart{
+	float:left;
+}
+
+
+#form_demande_credit .leftPart{
+}
+
+.bgFieldset{
+	display:none;
+}
+
+
+#form_demande_credit .field{
+	background:white;
+}
+
+.clear{
+	clear:both;
+}
+
+#form_demande_credit .radio input,
+#form_demande_credit .radio label
+{
+	float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

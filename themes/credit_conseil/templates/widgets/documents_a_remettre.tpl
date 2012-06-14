@@ -1,0 +1,1 @@
+<a class='documents_a_remettre_btn' href="/{$shortlang}/{l file='urls' term='credit-prive/documents-a-remettre.html'}" title=''>{l file='global' term='Documents à remettre'}</a>
