@@ -1,0 +1,2 @@
+htdocs_assurances
+=================
